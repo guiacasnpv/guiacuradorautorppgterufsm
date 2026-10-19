@@ -10,14 +10,23 @@ let detailsBeforePrint = [];
 
 const siteVisitCount = document.querySelector("#site-visit-count");
 if (siteVisitCount) {
-  if (window.goatcounter?.visit_count) {
-    window.goatcounter.visit_count({
-      append: "#site-visit-count",
-      path: "TOTAL",
+  fetch("https://guiacuradorautorppgterufsm.goatcounter.com/counter/TOTAL.json")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`GoatCounter respondeu com HTTP ${response.status}.`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      if (typeof data.count !== "string" || !data.count.trim()) {
+        throw new Error("GoatCounter retornou uma contagem inválida.");
+      }
+      siteVisitCount.textContent = data.count;
+    })
+    .catch((error) => {
+      console.error("Não foi possível carregar o contador de acessos.", error);
+      siteVisitCount.textContent = "Contagem indisponível neste momento.";
     });
-  } else {
-    siteVisitCount.textContent = "Contagem indisponível neste momento.";
-  }
 }
 
 printWorksheetButton?.addEventListener("click", () => {

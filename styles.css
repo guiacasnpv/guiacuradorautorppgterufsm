@@ -1467,6 +1467,14 @@ a {
   font-size: inherit;
 }
 
+.site-visit-counter #site-visit-count {
+  display: inline-block;
+  min-height: 1.5em;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
 .site-visit-counter small {
   display: block;
   margin-top: 0.35rem;
