@@ -9,8 +9,13 @@
     >
     <meta name="theme-color" content="#173c32">
     <title>Curadoria e Autoria docentes — Guia tutorial para professores de Língua Espanhola</title>
-    <link rel="stylesheet" href="styles.css?v=20261018-1">
-    <script src="script.js?v=20261017-1" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20261019-1">
+    <script
+      data-goatcounter="https://guiacuradorautorppgterufsm.goatcounter.com/count"
+      src="https://gc.zgo.at/count.js"
+      defer
+    ></script>
+    <script src="script.js?v=20261019-1" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -1234,15 +1239,23 @@
         <div class="profile-grid">
           <article class="profile-card profile-card-person">
             <div class="profile-heading">
-              <img
-                class="profile-avatar"
-                src="assets/avatar-silvia.jpg"
-                alt="Avatar ilustrado de Sílvia Natércia Pedrozo Viana trabalhando em um caderno, com fones de ouvido e elementos ligados a gatos e cães."
-                width="800"
-                height="800"
-                loading="lazy"
-                decoding="async"
+              <a
+                class="profile-avatar-link"
+                href="assets/avatar-silvia.jpg"
+                target="_blank"
+                rel="noopener"
+                aria-label="Ampliar o avatar de Sílvia Natércia Pedrozo Viana (abre em nova aba)"
               >
+                <img
+                  class="profile-avatar"
+                  src="assets/avatar-silvia.jpg"
+                  alt="Avatar ilustrado de Sílvia Natércia Pedrozo Viana trabalhando em um caderno, com fones de ouvido e elementos ligados a gatos e cães."
+                  width="800"
+                  height="800"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </a>
               <div>
                 <span class="profile-number">01</span>
                 <h3>Sílvia Natércia Pedrozo Viana</h3>
@@ -1254,15 +1267,23 @@
           </article>
           <article class="profile-card profile-card-person">
             <div class="profile-heading">
-              <img
-                class="profile-avatar"
-                src="assets/avatar-vanessa.jpg"
-                alt="Avatar ilustrado de Vanessa Ribas Fialho ao lado de Bijoux, entre livros e materiais de estudo."
-                width="800"
-                height="800"
-                loading="lazy"
-                decoding="async"
+              <a
+                class="profile-avatar-link"
+                href="assets/avatar-vanessa.jpg"
+                target="_blank"
+                rel="noopener"
+                aria-label="Ampliar o avatar de Vanessa Ribas Fialho (abre em nova aba)"
               >
+                <img
+                  class="profile-avatar"
+                  src="assets/avatar-vanessa.jpg"
+                  alt="Avatar ilustrado de Vanessa Ribas Fialho ao lado de Bijoux, entre livros e materiais de estudo."
+                  width="800"
+                  height="800"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </a>
               <div>
                 <span class="profile-number">02</span>
                 <h3>Prof.ª Dr.ª Vanessa Ribas Fialho</h3>
@@ -1358,9 +1379,14 @@
           interpretação dos resultados da pesquisa sobre curadoria e autoria de
           materiais de ensino de Espanhol na RMSM.
         </p>
-        <p class="footer-credit">
-          <a href="#referencias">Consultar referências</a> · <a href="#contatos">Nossos contatos</a>
-        </p>
+        <div class="footer-credit">
+          <p><a href="#referencias">Consultar referências</a> · <a href="#contatos">Nossos contatos</a></p>
+          <div class="site-visit-counter" aria-label="Contagem de acessos">
+            <p>Acessos totais ao guia</p>
+            <div id="site-visit-count" role="status" aria-live="polite"></div>
+            <small>Contagem iniciada após a ativação do contador.</small>
+          </div>
+        </div>
       </div>
     </footer>
   </body>

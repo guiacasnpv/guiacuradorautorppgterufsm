@@ -8,6 +8,18 @@ const printWorksheetButton = document.querySelector("#print-worksheet");
 let isWorksheetPrinting = false;
 let detailsBeforePrint = [];
 
+const siteVisitCount = document.querySelector("#site-visit-count");
+if (siteVisitCount) {
+  if (window.goatcounter?.visit_count) {
+    window.goatcounter.visit_count({
+      append: "#site-visit-count",
+      path: "TOTAL",
+    });
+  } else {
+    siteVisitCount.textContent = "Contagem indisponível neste momento.";
+  }
+}
+
 printWorksheetButton?.addEventListener("click", () => {
   isWorksheetPrinting = true;
   document.body.classList.add("print-worksheet");

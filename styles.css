@@ -570,10 +570,26 @@ a {
 
 .profile-avatar {
   display: block;
-  width: 10rem;
+  width: 100%;
   height: auto;
   border: 1px solid var(--line);
   border-radius: 0.35rem;
+}
+
+.profile-avatar-link {
+  display: block;
+  width: 10rem;
+  border-radius: 0.35rem;
+}
+
+.profile-avatar-link:hover .profile-avatar {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 2px;
+}
+
+.profile-avatar-link:focus-visible {
+  outline: 3px solid var(--terracotta);
+  outline-offset: 4px;
 }
 
 .profile-cover {
@@ -1437,6 +1453,23 @@ a {
 
 .footer-credit {
   color: #bdcbbf;
+}
+
+.site-visit-counter {
+  margin-top: 0.85rem;
+  color: #e3e9e2;
+  font-size: 0.78rem;
+}
+
+.site-visit-counter p {
+  margin: 0 0 0.35rem;
+  color: inherit;
+  font-size: inherit;
+}
+
+.site-visit-counter small {
+  display: block;
+  margin-top: 0.35rem;
 }
 
 .data-grid-compact {
@@ -2357,7 +2390,7 @@ details:not(.guide-menu):not(.tool-card).worksheet-example > summary::after {
     gap: 0.9rem;
   }
 
-  .profile-avatar {
+  .profile-avatar-link {
     width: 7rem;
   }
 
