@@ -410,6 +410,14 @@ a {
   background: var(--pine-deep);
 }
 
+.profile-lattes-button {
+  width: fit-content;
+  min-height: 40px;
+  margin-top: 0.75rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.9rem;
+}
+
 .button-primary span,
 .button-light span {
   font-size: 1.2rem;
@@ -1794,10 +1802,16 @@ main .formation-heading > p:not(.eyebrow) {
   background: var(--white);
 }
 
+.formation-links {
+  display: grid;
+  justify-items: start;
+  margin-top: auto;
+  gap: 0.45rem;
+  padding-top: 1rem;
+}
+
 .formation-link {
   width: fit-content;
-  margin-top: auto;
-  padding-top: 1rem;
   color: var(--pine);
   font-weight: 700;
   text-underline-offset: 0.18em;
