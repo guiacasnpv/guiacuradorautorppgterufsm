@@ -57,7 +57,6 @@ main :is(
   .stage-card,
   .tool-card,
   .intro-copy,
-  .accessibility-path,
   .worksheet-intro,
   .formation-card,
   .adapt-card,
@@ -1883,12 +1882,6 @@ details:not(.guide-menu):not(.tool-card).worksheet-example > summary::after {
 }
 
 .curation-support .section-heading h3,
-.accessibility-path .section-heading h3 {
-  margin: 0;
-  font-family: Georgia, serif;
-  font-size: clamp(1.7rem, 3vw, 2.25rem);
-}
-
 .five-c-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -1911,10 +1904,27 @@ details:not(.guide-menu):not(.tool-card).worksheet-example > summary::after {
   font-size: 0.88rem;
 }
 
-.accessibility-path {
+.ai-guidance-section {
   margin-top: 2rem;
-  padding: clamp(1.25rem, 3vw, 2rem);
-  background: var(--paper);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.ai-guidance-heading {
+  max-width: 800px;
+  margin-bottom: 1.25rem;
+}
+
+.ai-guidance-heading h3 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: clamp(1.7rem, 3vw, 2.25rem);
+  line-height: 1.2;
+}
+
+.ai-guidance-heading p:last-child {
+  margin-bottom: 0;
+  color: var(--ink-soft);
 }
 
 .barrier-grid {
@@ -2001,10 +2011,26 @@ details:not(.guide-menu):not(.tool-card).worksheet-example > summary::after {
   color: var(--ink);
 }
 
-.evaluation-button {
-  margin-top: 0.5rem;
-  padding-inline: 1.5rem;
-  box-shadow: 0 8px 20px rgba(21, 56, 49, 0.12);
+.suggestions-form {
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.suggestions-form iframe {
+  display: block;
+  width: 100%;
+  min-height: 1000px;
+  border: 0;
+}
+
+.suggestions-form p {
+  margin: 0.5rem 0 0;
+  font-size: 0.88rem;
+}
+
+.suggestions-form a {
+  color: var(--pine);
+  font-weight: 700;
 }
 
 .pending-link {
